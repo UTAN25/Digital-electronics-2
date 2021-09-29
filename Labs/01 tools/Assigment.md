@@ -43,10 +43,16 @@ int main(void)
     // Infinite loop
     while (1)
     {
-        // Pause several milliseconds
-        _delay_ms(SHORT_DELAY);
+    
+        for( a=0 ; a < 3 ; a++ )        //Turns it On - Off - On (3 time loop)             
+        {
+            _delay_ms(SHORT_DELAY);           // Pause several milliseconds
+            PORTB = PORTB ^ (1<<LED_GREEN);
+        }
+        
+        _delay_ms(400);  // Extra pause while it is On
+        PORTB = PORTB ^ (1<<LED_GREEN);       //Turns it Off so at the end of the "for" is On again.
 
-        // WRITE YOUR CODE HERE
     }
 
     // Will never reach this
