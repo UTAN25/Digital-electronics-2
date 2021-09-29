@@ -11,7 +11,7 @@
 *Editing Readme File* Editing Readme File Editing Readme File **Editing Readme File** Editing Readme File
 
 
-![google] (https://www.google.cz/)
+![google](https://www.google.cz/)
 
 ```bash
 This is supposed to be some code
