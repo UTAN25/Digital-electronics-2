@@ -1,4 +1,4 @@
-# Lab 1: YOUR_FIRSTNAME FAMILYNAME
+# Lab 1: Unai Telletxea
 
 Link to your `Digital-electronics-2` GitHub repository:
 
