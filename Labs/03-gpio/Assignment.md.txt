@@ -1,8 +1,8 @@
-# Lab 3: YOUR_FIRSTNAME FAMILYNAME
+# Lab 3: Unai Telletxea
 
 Link to your `Digital-electronics-2` GitHub repository:
 
-   [https://github.com/...](https://github.com/...)
+   [https://github.com/UTAN25/Digital-electronics-2/](https://github.com/UTAN25/Digital-electronics-2/)
 
 
 ### Data types in C
@@ -16,7 +16,7 @@ Link to your `Digital-electronics-2` GitHub repository:
 | `uint16_t` | 16 | 0,...,65535 | Unsigned 8-bit integer |
 | `int16_t`  | 16 | -32768,...,32767 | Signed 16-bit integrer |
 | `float`    | 32 | -3.4e+38, ..., 3.4e+38 | Single-precision floating-point |
-| `void`     | 0 | 0 | Nothing |
+| `void`     | 0 | - | Nothing |
 
 
 ### GPIO library
@@ -29,7 +29,7 @@ Link to your `Digital-electronics-2` GitHub repository:
 
 ```c
     // Configure Push button at port D and enable internal pull-up resistor
-    // WRITE YOUR CODE HERE
+    GPIO_config_input_pulldown(&DDRB, PUSH); //bottom is connected to 5V
 
     // Infinite loop
     while (1)
@@ -37,7 +37,19 @@ Link to your `Digital-electronics-2` GitHub repository:
         // Pause several milliseconds
         _delay_ms(BLINK_DELAY);
 
-        // WRITE YOUR CODE HERE
+        while(GPIO_read(&PORTB,PUSH))            //Starts an internal loop while the bottom is pressed down
+        {
+            GPIO_write_high(&PORTB, LED_2);         //Sets LED2 ON and LED_GREEN OFF
+            GPIO_write_low(&PORTB, LED_GREEN);
+            _delay_ms(BLINK_DELAY);
+            
+            if(GPIO_read(&PORTD,PUSH));             //Ensures that the bottom is still PRESSED to continue the blinking
+            {                                         //If it is not it will jump this section and maintain the previous state
+                GPIO_write_low(&PORTB, LED_2);
+                GPIO_write_high(&PORTB, LED_GREEN);     //Sets LED_GREEN ON and LED_2 OFF
+                _delay_ms(BLINK_DELAY);
+            }                        
+        }
     }
 ```
 
