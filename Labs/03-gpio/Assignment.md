@@ -22,7 +22,7 @@ Link to your `Digital-electronics-2` GitHub repository:
 ### GPIO library
 
 1. In your words, describe the difference between the declaration and the definition of the function in C.
-   * Function declaration especifies the name of the functions, which parameters will be needed and the type of return the program should expect.
+   * Function declaration specifies the name of the functions, which parameters will be needed and the type of return the program should expect.
    * Function definition is the body of the function which tells the program what should the function do with the given parameters.
 
 2. Part of the C code listing with syntax highlighting, which toggles LEDs only if push button is pressed. Otherwise, the value of the LEDs does not change. Use function from your GPIO library. Let the push button is connected to port D:
