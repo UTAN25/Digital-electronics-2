@@ -47,7 +47,6 @@ Link to your `Digital-electronics-2` GitHub repository:
             {                                         //If it is not it will jump this section and maintain the previous state
                 GPIO_write_low(&PORTB, LED_2);
                 GPIO_write_high(&PORTB, LED_GREEN);     //Sets LED_GREEN ON and LED_2 OFF
-                _delay_ms(BLINK_DELAY);
             }                        
         }
     }
