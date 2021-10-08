@@ -29,7 +29,7 @@ Link to your `Digital-electronics-2` GitHub repository:
 
 ```c
     // Configure Push button at port D and enable internal pull-up resistor
-    GPIO_config_input_pulldown(&DDRB, PUSH); //bottom is connected to 5V
+    GPIO_config_input_pullup(&DDRB, PUSH); //bottom is connected to 5V
 
     // Infinite loop
     while (1)
