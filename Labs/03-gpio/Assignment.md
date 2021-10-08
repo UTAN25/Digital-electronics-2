@@ -37,13 +37,13 @@ Link to your `Digital-electronics-2` GitHub repository:
         // Pause several milliseconds
         _delay_ms(BLINK_DELAY);
 
-        while(GPIO_read(&PORTB,PUSH))            //Starts an internal loop while the bottom is pressed down
+        while(!GPIO_read(&PORTB,PUSH))            //Starts an internal loop while the bottom is pressed down
         {
             GPIO_write_high(&PORTB, LED_2);         //Sets LED2 ON and LED_GREEN OFF
             GPIO_write_low(&PORTB, LED_GREEN);
             _delay_ms(BLINK_DELAY);
             
-            if(GPIO_read(&PORTD,PUSH))             //Ensures that the bottom is still PRESSED to continue the blinking
+            if(!GPIO_read(&PORTD,PUSH))             //Ensures that the bottom is still PRESSED to continue the blinking
             {                                         //If it is not it will jump this section and maintain the previous state
                 GPIO_write_low(&PORTB, LED_2);
                 GPIO_write_high(&PORTB, LED_GREEN);     //Sets LED_GREEN ON and LED_2 OFF
