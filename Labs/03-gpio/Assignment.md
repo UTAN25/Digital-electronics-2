@@ -58,4 +58,4 @@ Link to your `Digital-electronics-2` GitHub repository:
 
 1. Scheme of traffic light application with one red/yellow/green light for cars and one red/green light for pedestrians. Connect AVR device, LEDs, resistors, one push button (for pedestrians), and supply voltage. The image can be drawn on a computer or by hand. Always name all components and their values!
 
-   ![your figure](https://github.com/UTAN25/Digital-electronics-2/blob/main/Labs/03-gpio/Captura.PNG)
+   ![your figure](https://github.com/UTAN25/Digital-electronics-2/blob/main/Labs/Esc%C3%A1ner%20-%202021-10-08%2022_41_39.pdf)
