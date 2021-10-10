@@ -29,7 +29,7 @@ Link to your `Digital-electronics-2` GitHub repository:
 
 ```c
     // Configure Push button at port D and enable internal pull-up resistor
-    GPIO_config_input_pullup(&DDRB, PUSH); //bottom is connected to GND
+    GPIO_config_input_pullup(&DDRD, PUSH); //bottom is connected to GND
 
     // Infinite loop
     while (1)
@@ -37,7 +37,7 @@ Link to your `Digital-electronics-2` GitHub repository:
         // Pause several milliseconds
         _delay_ms(BLINK_DELAY);
 
-        while(!GPIO_read(&PORTB,PUSH))            //Starts an internal loop while the bottom is pressed down
+        while(!GPIO_read(&PORTD,PUSH))            //Starts an internal loop while the bottom is pressed down
         {
             GPIO_write_high(&PORTB, LED_2);         //Sets LED2 ON and LED_GREEN OFF
             GPIO_write_low(&PORTB, LED_GREEN);
