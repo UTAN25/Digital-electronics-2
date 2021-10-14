@@ -19,8 +19,8 @@ Link to your `Digital-electronics-2` GitHub repository:
 ### Timer library
 
 1. In your words, describe the difference between common C function and interrupt service routine.
-   * Function
-   * Interrupt service routine
+   * Functions have to be called every time we need to use them in the program. In a secuential way, They have no special priority and some cases like checking a botton, depending on the timing the information might be lost (if the button is pressed when the program is not looking for it).
+   * Interrupt service routine, when activated, they can interrupt the execution of the code and start processing the routine. In this way It is possible to give priority to certain tasks and leave the others for later.
 
 2. Part of the header file listing with syntax highlighting, which defines settings for Timer/Counter0:
 
