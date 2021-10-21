@@ -21,7 +21,7 @@ Link to your `Digital-electronics-2` GitHub repository:
 ISR(TIMER1_OVF_vect)
 {
     
-    if (counter1==9)
+    if (counter1==9) 
     
        counter1=0;
        counter2++;
@@ -45,15 +45,15 @@ ISR(TIMER1_OVF_vect)
 ISR(TIMER0_OVF_vect)
 {
     static uint8_t pos = 0;
-    if (pos==0)
+    if (pos)
     
-        SEG_update_shift_regs(counter2,0);
-        pos=1;
+        SEG_update_shift_regs(counter2,1);
+        pos=0;
         
     else
     
-        SEG_update_shift_regs(counter1,1);
-        pos=0;
+        SEG_update_shift_regs(counter1,0);
+        pos=1;
 
 }
 ```
