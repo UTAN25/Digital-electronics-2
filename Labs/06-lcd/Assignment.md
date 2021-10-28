@@ -30,7 +30,23 @@ https://github.com/UTAN25/Digital-electronics-2](https://github.com/UTAN25/Digit
 /* Variables ---------------------------------------------------------*/
 // Custom character definition
 uint8_t customChar[16] = {
-    // WRITE YOUR CODE HERE
+    0b11111,
+    0b10001,
+    0b10101,
+    0b10101,
+    0b10101,
+    0b10101,
+    0b10001,
+    0b11111,
+    
+    0b10001,
+    0b01010,
+    0b00100,
+    0b11011,
+    0b11011,
+    0b00100,
+    0b01010,
+    0b10001
 
 };
 ```
