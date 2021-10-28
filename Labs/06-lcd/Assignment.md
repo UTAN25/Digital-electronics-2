@@ -1,14 +1,14 @@
-# Lab 6: YOUR_FIRSTNAME FAMILYNAME
+# Lab 6: Unai Telletxea
 
 Link to your `Digital-electronics-2` GitHub repository:
 
-[https://github.com/your-github-account/repository-name/lab_name](https://github.com/...)
+https://github.com/UTAN25/Digital-electronics-2](https://github.com/UTAN25/Digital-electronics-2)
 
 
 ### LCD display module
 
 1. In your words, describe what ASCII table is.
-   * ASCII
+   * ASCII is the list which desfines the bit, hex... value associated with each number and character. It is used as a way to replace human typografy in a "machine friendly" way (with ones and zeros).
 
 2. (Hand-drawn) picture of time signals between ATmega328P and LCD keypad shield (HD44780 driver) when transmitting three character data `De2`.
 
