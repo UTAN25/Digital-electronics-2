@@ -34,6 +34,48 @@ ISR(ADC_vect)
     itoa(value, lcd_string, 10);  // Convert decimal value to string
 
     // WRITE YOUR CODE HERE
+        lcd_gotoxy(8,0);
+    lcd_puts("    ");      //Delete the previous value
+    
+    lcd_gotoxy(8,0);
+    lcd_puts(lcd_string);       //Display decimal
+    
+    itoa(value, lcd_string, 16);    //Convert to hex
+
+    lcd_gotoxy(13,0);
+    lcd_puts("   ");
+    
+    lcd_gotoxy(13,0);
+    lcd_puts(lcd_string);   //Display hex
+    
+    lcd_gotoxy(8,1);
+    lcd_puts("       ");   //Delete the previous value
+    
+    lcd_gotoxy(8,1);
+    if (value>=50)         //Search for the range of value
+    {
+        if (value>150)
+        {
+            if (value>300)
+            {
+                if (value>500)
+                {
+                    if (value>800)
+                    {
+                         lcd_puts("none"); uart_puts("none");      //Show pressed buton name in PC and LCD
+                    } 
+                    else{ lcd_puts("Select"); uart_puts("Select"); }
+                }
+                else{lcd_puts("Left"); uart_puts("Left"); }
+            } 
+            else{lcd_puts("Down"); uart_puts("Down"); }
+        }
+        else{lcd_puts("Up"); uart_puts("Up"); }
+    }
+    else{ lcd_puts("Right"); uart_puts("Right"); }
+    
+    uart_puts(" ");
+    uart_puts(lcd_string);    //Show hex in PC
 
 }
 ```
