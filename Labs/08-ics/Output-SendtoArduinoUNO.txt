@@ -1,0 +1,9 @@
+﻿
+avrdude.exe: AVR device initialized and ready to accept instructions
+avrdude.exe: Device signature = 0x1e950f (probably m328p)
+avrdude.exe: reading input file "GccApplication1.hex"
+avrdude.exe: writing flash (1192 bytes):
+avrdude.exe: 1192 bytes of flash written
+
+avrdude.exe done.  Thank you.
+
