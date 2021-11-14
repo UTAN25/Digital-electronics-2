@@ -2,7 +2,7 @@
 
 Link to this file in your GitHub repository:
 
-[https://github.com/your-github-account/repository-name/lab_name](https://github.com/...)
+[https://github.com/UTAN25/Digital-electronics-2/tree/main/Labs/08-ics](https://github.com/UTAN25/Digital-electronics-2/tree/main/Labs/08-ics)
 
 ### Arduino Uno pinout
 
